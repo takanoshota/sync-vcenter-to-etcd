@@ -1,0 +1,14 @@
+apiVersion: v1
+data:
+  vCSAHostname: "{{ .Values.vcsaHostname }}"
+  vCSAUserName: "{{ .Values.vcsaUsername }}"
+  vCSAPassword: "{{ .Values.vcsaPassword }}"
+  etcdEndpoint: "{{ .Values.etcdEndpoint }}"
+  etcdPluginRootPath: "{{ .Values.etcdPluginRootPath }}"
+  etcdDomainName: "{{ .Values.etcdDomainName }}"
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: sync-vc
+  name: my-config

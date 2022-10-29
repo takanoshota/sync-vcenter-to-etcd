@@ -1,0 +1,6 @@
+vcsaHostname: "https://192.168.0.90/sdk"
+vcsaUsername: "administrator@vsphere.local"
+vcsaPassword: "xxxxxxxxxxxx"
+etcdEndpoint: "etcd:2379"
+etcdPluginRootPath: "/skydns"
+etcdDomainName: "/com/example/myhomelab"

@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: sync-vc
+  name: sync-vc
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          creationTimestamp: null
+          labels:
+            io.kompose.service: sync-vc
+        spec:
+          containers:
+            - image: docker.io/shotatakanotamago/sync-vc:v1
+              name: sync-vc
+              resources: {}
+              envFrom:
+              - configMapRef:
+                  name: my-config
+          restartPolicy: Never
